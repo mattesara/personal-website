@@ -1,0 +1,307 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/font/Roboto-Regular-webfont.woff") format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  height: 1200px;
+  font-size: 18px;
+  font-family: sans-serif;
+  color: #5D6063;
+  background-color: #03045e;
+  z-index: 1;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  width: 100%;
+  padding: 80px;
+  color: #F8F9FA;
+  background: linear-gradient(to right, #000000, #03045e);
+}
+
+.menu {
+  margin-top: 15px;
+  position: absolute;
+  bottom: 5px;
+  font-size: 15px;
+}
+
+.menu > li {
+  display: inline;
+  margin-right: 100px;
+
+}
+
+.menu li a {
+    color: #F8F9FA;
+    background-color: rgba(0, 0, 0, 0);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.menu li a:hover {
+    background: linear-gradient(to right, #000000, #03045e);
+
+}
+
+.menu > li:last-of-type {
+  margin-right: 0;
+}
+
+.title {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  width: 350px;
+  text-align: center;
+  line-height: 1.6em;
+}
+
+article {
+    color: #F8F9FA;
+}
+
+.content-container {
+    display: flex;
+    position: relative;
+    height: 600px;
+    justify-content: center;
+}
+
+.content {
+  display: flex;
+  font-size: 16px;
+  text-align: left;
+  height: 500px;
+  position: absolute;
+  top: 350px;
+  left: 300px;
+  line-height: 24px;
+}
+
+article .photo {
+    position: absolute;
+    left: 70px;
+    top: 340px;
+}
+
+article .photo img {
+  width:200px;
+  height: 200px;
+  border-radius: 75px;
+}
+
+
+.CV {
+  color: #F8F9FA;
+  position: absolute;
+  background-color: #000000;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #5D6063;
+  border-radius: 5px;
+  width: 200px;
+  box-sizing: border-box;
+  left: 70px;
+  top: 560px;
+  font-size: 18px;
+  display: inline-block;
+}
+
+.CV:hover {
+    background-color: #03045e;
+}
+
+section {
+    color: #F8F9FA;
+    margin-left: 205px;
+    margin-top: 100px;
+}
+
+section h1 {
+    display: inline-block;
+}
+
+section h1:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.section-container {
+  color: #F8F9FA;
+  display: flex;
+  justify-content: center;
+}
+
+.section {
+  width: 900px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  bottom: 85px;
+  right: 40px;
+}
+
+.section div {
+  color: #F8F9FA;
+  background-color: #000000;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #5D6063;
+  border-radius: 5px;
+  width: 200px;
+  box-sizing: border-box;
+  margin-left: 20px;
+  margin-top: 40px;
+}
+
+.section .python:hover {
+    background: linear-gradient(to right, #000000, yellow);
+}
+
+.section .django:hover {
+    background: linear-gradient(to right, #000000, red);
+}
+
+.section .solidity:hover {
+    background: linear-gradient(to right, #000000, blue);
+}
+
+.section .mongo:hover {
+    background: linear-gradient(to right, #000000, green);
+}
+
+.section .html:hover {
+    background: linear-gradient(to right, #000000, orange);
+}
+
+.section .git:hover {
+    background: linear-gradient(to right, #000000, white);
+}
+
+.section .web3:hover {
+    background: linear-gradient(to right, #000000, yellow);
+}
+
+.links-container {
+  color: #F8F9FA;
+  display: flex;
+  justify-content: center;
+}
+
+.links {
+  width: 900px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+
+.links a {
+  color: #F8F9FA;
+  font-weight: bold;
+  margin-top: 75px;
+  text-decoration: none;
+}
+
+
+.line-1 {
+   width: 1400px;
+   margin: 0 auto;
+   height: 5px;
+   background-color: #696969;
+   margin-top: 60px;
+}
+
+.line-2 {
+   width: 1400px;
+   margin: 0 auto;
+   height: 5px;
+   background-color: #696969;
+}
+
+.link {
+  margin-left: 5px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.links a:hover .link {
+  opacity: 1;
+}
+
+
+.copyright {
+    display: flex;
+    margin-top: 60px;
+    width: 100%;
+    height: 45px;
+    background-color: #696969;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.copyright p {
+    color: #000000;
+    font-size: 15px;
+}
+
+
+@media (max-width: 1200px) {
+    .content-container {
+        margin-bottom: 200px;
+    }
+
+    .content {
+        left: 70px;
+        top: 450px;
+    }
+
+    article .photo {
+        top: 260px;
+    }
+
+    article .photo img {
+        width:180px;
+        height: 180px;
+    }
+
+    .CV {
+        top: 370px;
+        left: 280px
+    }
+}
+
+@media (max-width: 870px) {
+
+     .content-container {
+        margin-bottom: 450px;
+     }
+}
+
+
+
+

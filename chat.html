@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Matteo Sebastiani Personal Website</title>
+    <link href='assets/css/styles-chat.css' rel='stylesheet'/>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+          emailjs.init('qivz1hQG2igc041Ov');
+        })();
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="title">Hi there, I'm Matteo, a Full stack developer specialized in blockchain. Welcome on my website!</h1>
+      <ul class="menu">
+        <li><a href='index.html'>Blog</a></li>
+        <li><a href='work.html'>Work</a></li>
+        <li><a href='chat.html'>Chat</a></li>
+      </ul>
+    </div>
+    <section class="email-form-container">
+      <div class="email-form-header">
+        <h1>Contact me</h1>
+        <p><em>Send me an email by filling out this form</em></p>
+      </div>
+      <form id="contact-form" action='' method='get' class='email-form'>
+        <div class='form-row'>
+          <label for='name'>Name</label>
+          <input id='name' name='name' type='text'/>
+        </div>
+        <div class='form-row'>
+          <label for='email'>Email</label>
+          <input id='email'
+            name='email'
+            type='email'
+            placeholder='joe@example.com'/>
+        </div>
+        <div class='form-row'>
+          <label for='title'>Title</label>
+          <input id='title' name='title' type='text'/>
+        </div>
+        <div class='form-row'>
+          <label for='text'>Text</label>
+          <textarea id='text' name='text'></textarea>
+          <div class='instructions'>Describe your talk in 500 words or less</div>
+        </div>
+        <div class='form-row'>
+          <button>Submit</button>
+        </div>
+      </form>
+    </section>
+    <script>
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var title = document.getElementById('title').value;
+        var text = document.getElementById('text').value;
+
+
+        var templateParams = {
+            name: name,
+            email: email,
+            title: title,
+            text: text
+        };
+
+
+        emailjs.send('service_r5aq1vd', 'template_xq0htni', templateParams)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Email inviata con successo!');
+            }, function(error) {
+                console.error('FAILED...', error);
+                alert('Errore durante l\'invio dell\'email. Per favore riprova.');
+            });
+      });
+    </script>
+  </body>
+</html>
