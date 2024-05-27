@@ -228,7 +228,6 @@ section h1:hover {
 
 
 .line-1 {
-   width: 1400px;
    margin: 0 auto;
    height: 5px;
    background-color: #696969;
@@ -236,7 +235,6 @@ section h1:hover {
 }
 
 .line-2 {
-   width: 1400px;
    margin: 0 auto;
    height: 5px;
    background-color: #696969;
@@ -270,7 +268,7 @@ section h1:hover {
 }
 
 
-@media (min-width: 870px, max-width: 1200px) {
+@media (max-width: 1200px) {
     .content-container {
         margin-bottom: 200px;
     }
